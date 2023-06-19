@@ -23,27 +23,33 @@ layout: default
     <!-- Skills -->
     <section id="skills">
       <h2>Skills</h2>
-      <p><i>Programming Language: Python, C/C++, C#</i></p>
-      <p><i>Frameworks: Pytorch, Jax, Tensorflow</i></p>
-      <p><i>Language: <b>Korean(Fluent)</b>, English(Advanced), Mongolian(Native)</i></p>
+      <div style="padding-left: 30px;">
+        <p><i>Programming Language: Python, C/C++, C#</i></p>
+        <p><i>Frameworks: Pytorch, Jax, Tensorflow</i></p>
+        <p><i>Language: <b>Korean(Fluent)</b>, English(Advanced), Mongolian(Native)</i></p>
+      </div>
     </section>
 
     <!-- Experience -->
     <section id="experience">
       <h2>Experience</h2>
-      <i><h4>Korea Institute Science and Technology (KIST)</h4></i>
-      <i>Department for Artificial Intiligence, Research Intern (2021.09~current)</i>
-      <i><h4>Kyung Hee University</h4></i>
-      <i>Department for Computer Engineering (2019.09~2021.08)</i>
+      <div style="padding-left: 30px;">
+        <i><h4>Korea Institute Science and Technology (KIST)</h4></i>
+        <i>Department for Artificial Intiligence, Research Intern (2021.09~current)</i>
+        <i><h4>Kyung Hee University</h4></i>
+        <i>Department for Computer Engineering (2019.09~2021.08)</i>
+      </div>
     </section>
 
     <!-- Education -->
     <section id="education">
       <h2>Education</h2>
-      <i><h4>Kyung Hee University</h4></i>
-      <i>Master degree</i>
-      <i><h4>Kyung Hee University</h4></i>
-      <i>Bachelor degree</i>
+      <div style="padding-left: 30px;">
+        <i><h4>Kyung Hee University</h4></i>
+        <i>Master degree</i>
+        <i><h4>Kyung Hee University</h4></i>
+        <i>Bachelor degree</i>
+      </div>
 
     </section>
 
@@ -52,15 +58,17 @@ layout: default
       <h2>Projects</h2>
       {% for post in paginator.posts %}
       <article class="post">
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          <h3>{{ post.title }}</h3>
+        <div style="padding-left: 30px;">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            <h3>{{ post.title }}</h3>
 
-        </a>
-        <div class="entry">
-          {{ post.excerpt }}
+          </a>
+          <div class="entry">
+            {{ post.excerpt }}
+          </div>
+
+          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
         </div>
-
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
       </article>
       {% endfor %}
     </section>
@@ -68,17 +76,23 @@ layout: default
     <!-- Publications -->
     <section id="publications">
       <h2>Publications</h2>
-      <p>Bidirectional Temporal Diffusion Model for Temporally Consistent Human Animation. NeurIPS, 2023 (submitted)</p>
-      <p>Efficient human foot reconstruction and size measurement from a few color images. JCDE, 2023 (submitted)</p>
-      <p>INDeeD &colon Identical and Disparate Feature Decomposition from Multi-label Data. IS&T Electronic Imaging, 2022</p>
-      <p>Learning Individual Class Representation from Biased Multi-label Data. IEEE Access, 2021.</p>
+      <div style="padding-left: 30px;">
+        <p><i><b>Tserendorj Adiya</b>, Sanghun Kim, Jung Eun Lee, Jea Shin Yoon and Hwasup Lim.</i> Bidirectional Temporal Diffusion Model for Temporally Consistent Human Animation. <i>NeurIPS, 2023 (submitted)</i></p>
+        <p><i><b>Tserendorj Adiya</b>, Sanghun Kim, Jung Eun Lee, Jea Shin Yoon and Hwasup Lim.</i> Efficient human foot reconstruction and size measurement from a few color images. <i>JCDE, 2023 (submitted)</i></p>
+        <p><i><b>Tserendorj Adiya</b> and Seungkyu Lee.</i> INDeeD: Identical and Disparate Feature Decomposition from Multi-label Data. <i>IS&T Electronic Imaging, 2022</i></p>
+        <p><i><b>Tserendorj Adiya</b> and Seungkyu Lee.</i> Learning Individual Class Representation from Biased Multi-label Data. <i>IEEE Access, 2021.</i></p>
+      </div>
 
     </section>
 
     <!-- Patents -->
     <section id="patents">
       <h2>Patents</h2>
-
+      <div style="padding-left: 30px;">
+        <p><i><b>Tserendorj Adiya</b> Sanghun Kim, Jung Eun Lee, Jae Shin Yoon and Hwasup Lim.</i> Method for Generating Temporally Consistent Human Animation. <i>Overseas patent pending</i></p>
+        <p><i><b>Tserendorj Adiya</b> Sanghun Kim, Soomin Kim and Hwasup Lim. </i> Method for 3D Foot Reconstruction and Size Measurement from a Few Color Images. <i>Overseas patent pending</i></p>
+        <p><i>Sanghun Kim, <b>Tserendorj Adiya</b> Jung Eun Lee, Soomin Kim and Hwasup Lim.</i> Body measurement based on 3D body model fitting. <i>Overseas patent pending</i></p>
+      </div>
     </section>
 
   </article>
