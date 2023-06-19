@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
-  text-align: center;
+  text-align: left;
 
   @include mobile {
     line-height: 1.4;
@@ -279,8 +279,8 @@ p > img {
 
 .site-avatar {
   float: left;
-  width: 70px;
-  height: 70px;
+  width: 200px;
+  height: 200px;
   margin-right: 15px;
 
   @include mobile {
@@ -290,9 +290,9 @@ p > img {
   }
 
   img {
-    border-radius: 5px;
-    width: 70px;
-    height: 70px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
   }
 }
@@ -1139,6 +1139,18 @@ Modules - reusable parts of our design
   }
 }
 
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px;
+}
+
+section {
+  margin-top: 20px;
+}
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start

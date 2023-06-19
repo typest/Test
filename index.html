@@ -2,7 +2,78 @@
 layout: default
 ---
 
-<div class="posts">
+<div class="profile">
+  <article class="profile">
+    <div class="row">
+      <div class="column">
+        <a href="{{ site.baseurl }}/" class="site-avatar">
+          <img src="{{ site.baseurl }}{{ site.avatar }}" alt="{{ site.title }}" />
+        </a>
+      </div>
+      <div class="column">
+        <!-- Personal Info -->
+        <section id="personal-info">
+          <h2>About Me</h2>
+          <p>I'm TST</p>
+          <p>I'm interested in <b>2D/3D vision</b>, <b>3D reconstruction</b> ,  <b>Neural Rendering</b> and <b>Generative AI</b></p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <p>Programming Language: Python, C/C++, C#</p>
+      <p>Frameworks: Pytorch, Jax, Tensorflow</p>
+      <p>Language: <b>Korean(Fluent)</b>, English(Advanced), Mongolian(Native)</p>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      {% for post in paginator.posts %}
+      <article class="post">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <h3>{{ post.title }}</h3>
+
+        </a>
+        <div class="entry">
+          {{ post.excerpt }}
+        </div>
+
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      </article>
+      {% endfor %}
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications</h2>
+
+    </section>
+
+    <!-- Patents -->
+    <section id="patents">
+      <h2>Patents</h2>
+
+    </section>
+
+  </article>
+</div>
+
+<!-- <div class="posts">
   {% for post in paginator.posts %}
     <article class="post">
       <a href="{{ site.baseurl }}{{ post.url }}">
@@ -18,10 +89,10 @@ layout: default
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
-  {% endfor %}
+  {% endfor %} -->
 
   <!-- pagination -->
-  {% if paginator.total_pages > 1 %}
+  <!-- {% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.previous_page %}
       <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
@@ -45,5 +116,5 @@ layout: default
       <span>Next &raquo;</span>
     {% endif %}
   </div>
-  {% endif %}
+  {% endif %} -->
 </div>
