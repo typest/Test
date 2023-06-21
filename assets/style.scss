@@ -1152,6 +1152,9 @@ section {
   margin-top: 20px;
 }
 
+sup {font-size:small; vertical-align:top;}
+sub {font-size:small; vertical-align:under;}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";
