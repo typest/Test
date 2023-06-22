@@ -5,7 +5,7 @@ layout: default
 <div class="profile">
   <article class="profile">
     <div class="row">
-      <div class="column">
+      <div class="column1">
         <a href="{{ site.baseurl }}/" class="site-avatar">
           <img src="{{ site.baseurl }}{{ site.avatar }}" alt="{{ site.title }}" />
         </a>
@@ -13,9 +13,10 @@ layout: default
       <div class="column">
         <!-- Personal Info -->
         <section id="personal-info">
-          <h2>About Me</h2>
-          <p>I'm TST</p>
-          <p>I'm interested in <b>2D/3D vision</b>, <b>3D reconstruction</b> ,  <b>Neural Rendering</b> and <b>Generative AI</b></p>
+          <!-- <h2>About Me</h2> -->
+          <p>I obtained both my bachelor's and master's degrees in Computer Engineering from Kyung Hee University, under the supervision of Professor Seung-Kyu Lee. Currently, I am working as a research intern at the Korea Institute of Science and Technology.</p>
+          <p>I'm interested in <b>2D/3D Vision</b>, <b>Neural Rendering</b> and <b>Generative AI.</b></p>
+          <p><b>Email</b>: tdain72@gmail.com</p>
         </section>
       </div>
     </div>
@@ -23,32 +24,35 @@ layout: default
     <!-- Skills -->
     <section id="skills">
       <h2>Skills</h2>
+      <hr>
       <div style="padding-left: 30px;">
-        <p><i>Programming Language: Python, C/C++, C#</i></p>
-        <p><i>Frameworks: Pytorch, Jax, Tensorflow</i></p>
-        <p><i>Language: <b>Korean(Fluent)</b>, English(Advanced), Mongolian(Native)</i></p>
+        <p>Programming Language: <i>Python, C/C++, C#</i></p>
+        <p>Frameworks: <i>Pytorch, Jax, Tensorflow</i></p>
+        <p>Language: <i><b>Korean(Fluent)</b>, English(Advanced), Mongolian(Native)</i></p>
       </div>
     </section>
 
     <!-- Experience -->
     <section id="experience">
       <h2>Experience</h2>
+      <hr>
       <div style="padding-left: 30px;">
-        <i><h3>Korea Institute Science and Technology (KIST)</h3></i>
-        <i>Center for Artificial Intelligence, Research Intern (2021.09~current)</i>
-        <i><h3>Kyung Hee University</h3></i>
-        <i>Department of Computer Science and Engineering (2019.09~2021.08)</i>
+        <h4>Korea Institute Science and Technology</h4>
+        <p class="short-line-height"><i>Center for Artificial Intelligence, Research Intern (2021.09~current)</i></p>
+        <h4>Kyung Hee University</h4>
+        <p class="short-line-height"><i>Department of Computer Science and Engineering (2019.09~2021.08)</i></p>
       </div>
     </section>
 
     <!-- Education -->
     <section id="education">
       <h2>Education</h2>
+      <hr>
       <div style="padding-left: 30px;">
-        <i><h3>Kyung Hee University</h3></i>
-        <i>Master degree</i>
-        <i><h3>Kyung Hee University</h3></i>
-        <i>Bachelor degree</i>
+        <h4>Kyung Hee University</h4>
+        <p class="short-line-height"><i>Master degree</i></p>
+        <h4>Kyung Hee University</h4>
+        <p class="short-line-height"><i>Bachelor degree</i></p>
       </div>
 
     </section>
@@ -56,18 +60,28 @@ layout: default
     <!-- Projects -->
     <section id="projects">
       <h2>Projects</h2>
+      <hr>
       {% for post in paginator.posts %}
       <article class="post">
         <div style="padding-left: 30px;">
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            <h3>{{ post.title }}</h3>
-
-          </a>
-          <div class="entry">
-            {{ post.excerpt }}
+          <div class="row">
+            <a href="{{ site.baseurl }}{{ post.url }}">
+              <h4>{{ post.title }}</h4>
+            </a>
           </div>
 
-          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+          <div class="row">
+            <div class="column2">
+              <img src="{{ post.image }}" alt="fd main" />
+            </div>
+            <div class="column">
+              <div class="entry">
+                {{ post.excerpt }}
+              </div>
+
+              <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Project Page</a>
+            </div>
+          </div>
         </div>
       </article>
       {% endfor %}
@@ -76,6 +90,7 @@ layout: default
     <!-- Publications -->
     <section id="publications">
       <h2>Publications</h2>
+      <hr>
       <div style="padding-left: 30px;">
         <p><i><b>Tserendorj Adiya</b>, Sanghun Kim, Jung Eun Lee, Jea Shin Yoon and Hwasup Lim.</i> Bidirectional Temporal Diffusion Model for Temporally Consistent Human Animation. <i>NeurIPS, 2023 (submitted)</i></p>
         <p><i><b>Tserendorj Adiya</b>, Sanghun Kim, Jung Eun Lee, Jea Shin Yoon and Hwasup Lim.</i> Efficient human foot reconstruction and size measurement from a few color images. <i>JCDE, 2023 (submitted)</i></p>
@@ -88,6 +103,7 @@ layout: default
     <!-- Patents -->
     <section id="patents">
       <h2>Patents</h2>
+      <hr>
       <div style="padding-left: 30px;">
         <p><i><b>Tserendorj Adiya</b> Sanghun Kim, Jung Eun Lee, Jae Shin Yoon and Hwasup Lim.</i> Method for Generating Temporally Consistent Human Animation. <i>Overseas patent pending</i></p>
         <p><i><b>Tserendorj Adiya</b> Sanghun Kim, Soomin Kim and Hwasup Lim. </i> Method for 3D Foot Reconstruction and Size Measurement from a Few Color Images. <i>Overseas patent pending</i></p>

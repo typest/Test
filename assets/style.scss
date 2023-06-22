@@ -26,13 +26,13 @@ body {
   color: #404040;
   line-height: 1.7;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
   height: 100%;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 850px;
   padding: 0 10px;
   width: 100%;
 }
@@ -1154,6 +1154,28 @@ section {
 
 sup {font-size:small; vertical-align:top;}
 sub {font-size:small; vertical-align:under;}
+
+.column1 {
+  flex: 2;
+  /* background-color: lightblue; */
+}
+
+.column2 {
+  flex: 1;
+  /* background-color: lightgreen; */
+}
+.short-line-height {
+line-height: 0;   /* Adjust this as needed */
+padding-bottom: 15px;
+}
+
+hr 
+{
+border: none;
+height: 1px;
+color: rgb(230, 230, 230); /* Old browsers */
+background-color: rgb(230, 230, 230);
+}
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
